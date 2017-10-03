@@ -1,6 +1,6 @@
-%global commit 25c4883e7c73c71d77fd32c8e33284ed5f081287
+%global commit c1e6a225d89377bfb1acbe34794b01cc359b23a6
 %global short_commit %(c=%{commit}; echo ${c:0:7})
-%global commit_date 20170419
+%global commit_date 20171002
 
 %global kodi_addon pvr.vuplus
 %global kodi_version 17.0
@@ -9,7 +9,7 @@ Name:           kodi-%(tr "." "-" <<<%{kodi_addon})
 # Use Epoch to manage upgrades from older upstream
 # (https://github.com/opdenkamp/xbmc-pvr-addons/)
 Epoch:          1
-Version:        2.4.10
+Version:        2.4.12
 Release:        1%{?dist}
 Summary:        Kodi's VuPlus client addon
 
@@ -57,6 +57,9 @@ cp -p %{SOURCE1} .
 
 
 %changelog
+* Tue Oct 03 2017 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1:2.4.12-1
+- Update to 2.4.12
+
 * Fri Apr 28 2017 Mohamed El Morabity <melmorabity@fedorapeople.org> - 1:2.4.10-1
 - Update to latest stable release for Kodi 17
 
