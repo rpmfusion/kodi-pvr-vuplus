@@ -1,6 +1,6 @@
-%global commit dc230ddff7c3a4b2296a7114439b516d8a02c446
+%global commit 016a4ff6d8c607a0119e825605f8f83a073fc662
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global commitdate 20180312
+%global commitdate 20180825
 
 %global kodi_addon pvr.vuplus
 %global kodi_version 18.0
@@ -9,8 +9,8 @@ Name:           kodi-%(tr "." "-" <<<%{kodi_addon})
 # Use Epoch to manage upgrades from older upstream
 # (https://github.com/opdenkamp/xbmc-pvr-addons/)
 Epoch:          1
-Version:        3.6.2
-Release:        2%{?dist}
+Version:        3.7.3
+Release:        1%{?dist}
 Summary:        Vu+ PVR for Kodi
 
 License:        GPLv2+
@@ -24,7 +24,7 @@ BuildRequires:  kodi-platform-devel >= %{kodi_version}
 BuildRequires:  platform-devel
 BuildRequires:  pkgconfig(tinyxml)
 Requires:       kodi >= %{kodi_version}
-ExclusiveArch:  i686 x86_64
+ExclusiveArch:  i686 x86_64 aarch64
 
 %description
 %{summary}.
@@ -53,6 +53,10 @@ find . -name "*.cpp" -exec chmod 0644 {} \;
 
 
 %changelog
+* Sat Sep 01 2018 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1:3.7.3-1
+- Update to 3.7.3
+- Enable aarch64 build
+
 * Thu Jul 26 2018 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 1:3.6.2-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
 
