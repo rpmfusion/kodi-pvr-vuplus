@@ -6,7 +6,7 @@ Name:           kodi-%(tr "." "-" <<<%{kodi_addon})
 # Use Epoch to manage upgrades from older upstream
 # (https://github.com/opdenkamp/xbmc-pvr-addons/)
 Epoch:          1
-Version:        20.5.0
+Version:        20.5.1
 Release:        1%{?dist}
 Summary:        Vu+ PVR for Kodi
 
@@ -56,6 +56,9 @@ appstream-util validate-relax --nonet $RPM_BUILD_ROOT%{_metainfodir}/%{name}.met
 
 
 %changelog
+* Mon Mar 27 2023 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1:20.5.1-1
+- Update to 20.5.1
+
 * Sun Feb 12 2023 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1:20.5.0-1
 - Update to 20.5.0
 
